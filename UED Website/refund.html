@@ -1,0 +1,135 @@
+<!doctype html>  
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title >Refund</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/Footer-with-logo.css">
+      <link rel="stylesheet" href="css/common.css">
+      <link rel="stylesheet" href="css/admin.css">
+      <style>
+         a.btn.btn-primary.approve {
+            width: 97px;
+            background: #0c730c;
+            border: 1px solid #0c730c;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+
+        a.btn.btn-primary.reject {
+            width: 114px;
+            background: #cc1818;
+            border: 1px solid #cc1818;
+            margin-bottom: 10px;
+        }
+
+        .row.cardrow {
+            margin-top: 40px;
+        }
+
+        .container-fluid {
+          background: #dff0d8;
+      }
+      </style>
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+   </head>
+   <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="admin.html">Foodlers</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="admin.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menuitem.html">Update MenuList</a>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link " href="orderupdate.html">Update Orders</a>
+            
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="refund.html">Refund</a>
+          </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <a href="index.html"><span class="navbar-text">Signout</span> </a>
+      </div>
+    </nav>
+        <br>
+        <br>
+        <br>
+      
+              
+                    <div class="container">
+                            
+                        <div class="row justify-content-center">
+
+                                        <div class="gaadiex-list">
+                                            <div class="col-xs-8 offset-xs-8  col-md-8 offset-md-2 row">
+                                            <div class="gaadiex-list-item" id="id1"><img class="gaadiex-list-item-img" src="images/icons8-refund-60.png " alt="List user">
+                                              <div class="gaadiex-list-item-text">
+                                                <div class="date_Section">
+                                                  
+                                                  <h5 class="checkdate">Order Number: <input type="text" placeholder="325869"></input></h5>
+                                                  <h5 class="checkdate">Amount: <input type="text" placeholder="$0.00"></input></h5>
+                                                    
+                                                </div>
+                                               
+                                                <div class="button_Section">
+                                                        <button type="submit" class="btn btn-primary approve" onclick="myFunction()">Refund</button>
+                                                        
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                        
+
+                                        <script>
+                                        function myFunction() {
+                                          alert("Refund Processed Successfully ");
+                                        }
+                                        </script>
+                                        
+                    </div> 
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer id="myFooter">
+  <div class="container">
+      
+  <div class="second-bar">
+     <div class="container">
+          <h2 class="logo"><a href="#">Foodlers </a></h2>
+          <div class="social-icons">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+          </div>
+      </div>
+  </div>
+</footer>
+                </body>
+                </html>

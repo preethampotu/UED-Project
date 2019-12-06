@@ -1,0 +1,134 @@
+<!doctype html>  
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title >Login</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/Footer-with-logo.css">
+      <link rel="stylesheet" href="css/common.css">
+      <link rel="stylesheet" href="css/login.css">
+      <link rel="stylesheet" href="css/modal_success.css">
+   </head>
+   <body>
+      <!------ Include the above in your HEAD tag ---------->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">Foodlers</a>
+      </nav>
+      <div class="container login-container">
+         <div class="row">
+            <div class="col-md-12">
+               <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link active" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="true">User</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Admin</a>
+                  </li>
+               </ul>
+               <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active text-align form-new" id="user" role="tabpanel" aria-labelledby="user-tab">
+                     <div class="row justify-content-center">
+                        <div class="col-md-6 login-form-1">
+                           <h3>User Login</h3>
+                           <form name="loginCheck" onsubmit="return validateForm();" action="user.html"  >
+                              <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Username *"  required  name="ur"/>
+                                   <div class="invalid-feedback">
+                                     Please provide username / valid username!
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                 <input type="password" class="form-control" placeholder="Password *"  required name="pa" />
+                                 
+                                   <div class="invalid-feedback">
+                                     Please provide password / valid password!
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                 <input type="submit" class="btnSubmit" value="Login" />
+                              </div>
+                             
+                           </form>
+                           <h6 class="account"> Dont you have an account? Please register for a new account! </h6>
+   
+                           <div class="login_section">
+                              <div class="form-group login_btn">
+                                 <input type="button" class= "loginBtn" onclick="goToRegister()" value="Register" />
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade show text-align form-new" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+                     <div class="row justify-content-center" >
+                        <div class="col-md-6 login-form-2" >
+                           <h3>Admin Login</h3>
+                           <form name="loginaform" onsubmit="return validateadminForm();" action="admin.html">
+                              <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Username *" required name="urs" />
+                                 
+                                   <div class="invalid-feedback">
+                                     Please provide username / valid username!
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                 <input type="password" class="form-control" placeholder="Password *" required name="paw" />
+                                 
+                                   <div class="invalid-feedback">
+                                     Please provide password / valid password!
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                 <input type="submit" class="btnSubmit" value="Login" />
+                              </div>
+                              
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="myModal" class="modal fade">
+                     <div class="modal-dialog modal-confirm">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <div class="icon-box">
+                                 <i class="material-icons">&#xE876;</i>
+                              </div>				
+                              <h4 class="modal-title">Success!</h4>	
+                           </div>
+                           <div class="modal-body">
+                              <p class="text-center">You have loggged in succesfully</p>
+                           </div>
+                           <div class="modal-footer">
+                              <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div> 
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer id="myFooter">
+         <div class="container">
+             
+         <div class="second-bar">
+            <div class="container">
+                 <h2 class="logo"><a href="#">Foodlers </a></h2>
+                 <div class="social-icons">
+                     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                     <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                     <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                 </div>
+             </div>
+         </div>
+     </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="js/login.js"></script>
+   </body>
+</html>
